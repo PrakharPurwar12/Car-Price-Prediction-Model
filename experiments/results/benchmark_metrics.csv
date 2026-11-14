@@ -1,0 +1,5 @@
+scale,scale_factor,raw_records,pandas_etl_sec,spark_etl_sec,pandas_throughput_rows_sec,spark_throughput_rows_sec,sklearn_train_sec,spark_mllib_train_sec,spark_sql_query_sec
+1x,1,8148,0.052,7.557,133462.7,919.2,0.192,8.081,0.482
+5x,5,40740,0.269,3.416,151468.9,11924.5,0.143,7.132,0.431
+10x,10,81480,0.628,3.162,129751.2,25765.1,0.177,8.943,0.4
+20x,20,162960,1.029,4.616,158314.8,35300.2,0.183,13.334,0.788

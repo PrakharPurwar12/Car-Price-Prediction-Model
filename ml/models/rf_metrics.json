@@ -1,0 +1,20 @@
+{
+  "model_type": "Spark MLlib RandomForestRegressor",
+  "parameters": {
+    "numTrees": 100,
+    "maxDepth": 12,
+    "train_test_split": "80/20",
+    "seed": 42
+  },
+  "train_metrics": {
+    "r2": 0.962,
+    "rmse": 104940.61,
+    "mae": 57547.22
+  },
+  "test_metrics": {
+    "r2": 0.9,
+    "rmse": 147816.84,
+    "mae": 81699.35
+  },
+  "feature_importances_count": 61
+}

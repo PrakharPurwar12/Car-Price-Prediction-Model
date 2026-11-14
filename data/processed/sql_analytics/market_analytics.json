@@ -1,0 +1,505 @@
+{
+  "brand_summary": [
+    {
+      "brand": "Maruti",
+      "vehicle_count": 2169,
+      "avg_price": 387863.91,
+      "median_price": 350000,
+      "min_price": 29999,
+      "max_price": 1200000,
+      "avg_age": 11.9,
+      "avg_km_driven": 66748.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Hyundai",
+      "vehicle_count": 1271,
+      "avg_price": 455766.67,
+      "median_price": 415000,
+      "min_price": 30000,
+      "max_price": 2975000,
+      "avg_age": 11.3,
+      "avg_km_driven": 66293.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Mahindra",
+      "vehicle_count": 725,
+      "avg_price": 619637.2,
+      "median_price": 550000,
+      "min_price": 120000,
+      "max_price": 2275000,
+      "avg_age": 11.3,
+      "avg_km_driven": 91397.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Tata",
+      "vehicle_count": 648,
+      "avg_price": 344965.9,
+      "median_price": 252999,
+      "min_price": 40000,
+      "max_price": 1700000,
+      "avg_age": 12.0,
+      "avg_km_driven": 80676.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Honda",
+      "vehicle_count": 362,
+      "avg_price": 573563.91,
+      "median_price": 560000,
+      "min_price": 50000,
+      "max_price": 2125000,
+      "avg_age": 11.2,
+      "avg_km_driven": 67322.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Ford",
+      "vehicle_count": 361,
+      "avg_price": 504376.69,
+      "median_price": 450000,
+      "min_price": 55000,
+      "max_price": 3250000,
+      "avg_age": 11.2,
+      "avg_km_driven": 75010.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Toyota",
+      "vehicle_count": 357,
+      "avg_price": 889490.13,
+      "median_price": 700000,
+      "min_price": 100000,
+      "max_price": 3500000,
+      "avg_age": 12.2,
+      "avg_km_driven": 116095.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Chevrolet",
+      "vehicle_count": 216,
+      "avg_price": 268349.63,
+      "median_price": 220000,
+      "min_price": 45000,
+      "max_price": 1295000,
+      "avg_age": 12.9,
+      "avg_km_driven": 80118.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Renault",
+      "vehicle_count": 211,
+      "avg_price": 455914.65,
+      "median_price": 399000,
+      "min_price": 200000,
+      "max_price": 1265000,
+      "avg_age": 9.1,
+      "avg_km_driven": 60060.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Volkswagen",
+      "vehicle_count": 174,
+      "avg_price": 489574.7,
+      "median_price": 420000,
+      "min_price": 210000,
+      "max_price": 2150000,
+      "avg_age": 11.0,
+      "avg_km_driven": 73002.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Nissan",
+      "vehicle_count": 74,
+      "avg_price": 461932.38,
+      "median_price": 370000,
+      "min_price": 110000,
+      "max_price": 1200000,
+      "avg_age": 10.9,
+      "avg_km_driven": 71910.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Skoda",
+      "vehicle_count": 71,
+      "avg_price": 602126.72,
+      "median_price": 400000,
+      "min_price": 100000,
+      "max_price": 3251000,
+      "avg_age": 12.1,
+      "avg_km_driven": 92957.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Datsun",
+      "vehicle_count": 57,
+      "avg_price": 316017.49,
+      "median_price": 300000,
+      "min_price": 150000,
+      "max_price": 590000,
+      "avg_age": 8.0,
+      "avg_km_driven": 36582.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "BMW",
+      "vehicle_count": 48,
+      "avg_price": 2833750.0,
+      "median_price": 2150000,
+      "min_price": 480000,
+      "max_price": 7200000,
+      "avg_age": 10.6,
+      "avg_km_driven": 51658.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "vehicle_count": 46,
+      "avg_price": 2253347.83,
+      "median_price": 1859000,
+      "min_price": 400000,
+      "max_price": 6000000,
+      "avg_age": 11.5,
+      "avg_km_driven": 54952.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Fiat",
+      "vehicle_count": 44,
+      "avg_price": 295340.86,
+      "median_price": 280000,
+      "min_price": 70000,
+      "max_price": 700000,
+      "avg_age": 12.8,
+      "avg_km_driven": 87560.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Audi",
+      "vehicle_count": 33,
+      "avg_price": 2422363.55,
+      "median_price": 2000000,
+      "min_price": 730000,
+      "max_price": 6523000,
+      "avg_age": 10.2,
+      "avg_km_driven": 57537.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Jeep",
+      "vehicle_count": 22,
+      "avg_price": 1789227.23,
+      "median_price": 1650000,
+      "min_price": 1325000,
+      "max_price": 4100000,
+      "avg_age": 7.4,
+      "avg_km_driven": 39619.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Mitsubishi",
+      "vehicle_count": 11,
+      "avg_price": 758636.36,
+      "median_price": 625000,
+      "min_price": 150000,
+      "max_price": 1950000,
+      "avg_age": 16.2,
+      "avg_km_driven": 142681.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Volvo",
+      "vehicle_count": 9,
+      "avg_price": 4036111.11,
+      "median_price": 3400000,
+      "min_price": 1200000,
+      "max_price": 10000000,
+      "avg_age": 8.1,
+      "avg_km_driven": 32389.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Jaguar",
+      "vehicle_count": 8,
+      "avg_price": 2748250.0,
+      "median_price": 2625000,
+      "min_price": 2000000,
+      "max_price": 3500000,
+      "avg_age": 9.5,
+      "avg_km_driven": 36563.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Force",
+      "vehicle_count": 4,
+      "avg_price": 841250.0,
+      "median_price": 850000,
+      "min_price": 555000,
+      "max_price": 1050000,
+      "avg_age": 8.0,
+      "avg_km_driven": 75070.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Isuzu",
+      "vehicle_count": 4,
+      "avg_price": 1752500.0,
+      "median_price": 1250000,
+      "min_price": 1160000,
+      "max_price": 2700000,
+      "avg_age": 7.3,
+      "avg_km_driven": 54450.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "MG",
+      "vehicle_count": 4,
+      "avg_price": 2000000.0,
+      "median_price": 1750000,
+      "min_price": 1700000,
+      "max_price": 2650000,
+      "avg_age": 4.8,
+      "avg_km_driven": 11775.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Ambassador",
+      "vehicle_count": 4,
+      "avg_price": 124000.0,
+      "median_price": 99000,
+      "min_price": 75000,
+      "max_price": 200000,
+      "avg_age": 22.5,
+      "avg_km_driven": 82500.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Kia",
+      "vehicle_count": 3,
+      "avg_price": 1372666.67,
+      "median_price": 1575000,
+      "min_price": 643000,
+      "max_price": 1900000,
+      "avg_age": 5.7,
+      "avg_km_driven": 11667.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Daewoo",
+      "vehicle_count": 3,
+      "avg_price": 77000.0,
+      "median_price": 86000,
+      "min_price": 45000,
+      "max_price": 100000,
+      "avg_age": 24.7,
+      "avg_km_driven": 81317.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Land Rover",
+      "vehicle_count": 3,
+      "avg_price": 2716666.67,
+      "median_price": 2000000,
+      "min_price": 1650000,
+      "max_price": 4500000,
+      "avg_age": 10.0,
+      "avg_km_driven": 54429.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Ashok Leyland",
+      "vehicle_count": 1,
+      "avg_price": 300000.0,
+      "median_price": 300000,
+      "min_price": 300000,
+      "max_price": 300000,
+      "avg_age": 12.0,
+      "avg_km_driven": 200000.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Opel",
+      "vehicle_count": 1,
+      "avg_price": 68000.0,
+      "median_price": 68000,
+      "min_price": 68000,
+      "max_price": 68000,
+      "avg_age": 27.0,
+      "avg_km_driven": 110000.0,
+      "is_luxury": 0
+    },
+    {
+      "brand": "Lexus",
+      "vehicle_count": 1,
+      "avg_price": 5150000.0,
+      "median_price": 5150000,
+      "min_price": 5150000,
+      "max_price": 5150000,
+      "avg_age": 6.0,
+      "avg_km_driven": 20000.0,
+      "is_luxury": 1
+    },
+    {
+      "brand": "Peugeot",
+      "vehicle_count": 1,
+      "avg_price": 57000.0,
+      "median_price": 57000,
+      "min_price": 57000,
+      "max_price": 57000,
+      "avg_age": 28.0,
+      "avg_km_driven": 110000.0,
+      "is_luxury": 0
+    }
+  ],
+  "fuel_summary": [
+    {
+      "fuel": "Diesel",
+      "total_count": 3760,
+      "avg_price": 642121.48,
+      "avg_mileage": 19.74,
+      "avg_km_driven": 88599.0,
+      "avg_age": 11.3,
+      "price_per_year_retained": 63549.73
+    },
+    {
+      "fuel": "Petrol",
+      "total_count": 3091,
+      "avg_price": 378189.57,
+      "avg_mileage": 19.05,
+      "avg_km_driven": 55745.0,
+      "avg_age": 11.8,
+      "price_per_year_retained": 39614.75
+    },
+    {
+      "fuel": "CNG",
+      "total_count": 56,
+      "avg_price": 300499.95,
+      "avg_mileage": 33.34,
+      "avg_km_driven": 69329.0,
+      "avg_age": 10.6,
+      "price_per_year_retained": 32125.28
+    },
+    {
+      "fuel": "LPG",
+      "total_count": 38,
+      "avg_price": 200421.05,
+      "avg_mileage": 25.82,
+      "avg_km_driven": 89174.0,
+      "avg_age": 15.4,
+      "price_per_year_retained": 13632.88
+    },
+    {
+      "fuel": "Electric",
+      "total_count": 1,
+      "avg_price": 2650000.0,
+      "avg_mileage": 32.52,
+      "avg_km_driven": 10000.0,
+      "avg_age": 2.0,
+      "price_per_year_retained": 883333.33
+    }
+  ],
+  "transmission_summary": [
+    {
+      "transmission": "Automatic",
+      "total_count": 591,
+      "avg_price": 1325311.31,
+      "median_price": 850000,
+      "avg_power_bhp": 133.1,
+      "avg_engine_cc": 1775.0
+    },
+    {
+      "transmission": "Manual",
+      "total_count": 6355,
+      "avg_price": 444877.38,
+      "median_price": 388000,
+      "avg_power_bhp": 83.5,
+      "avg_engine_cc": 1393.0
+    }
+  ],
+  "owner_summary": [
+    {
+      "owner": "Test Drive Car",
+      "count": 5,
+      "avg_price": 4403800.0,
+      "avg_age": 6.0,
+      "avg_km_driven": 14631.0
+    },
+    {
+      "owner": "First Owner",
+      "count": 4259,
+      "avg_price": 618831.05,
+      "avg_age": 10.0,
+      "avg_km_driven": 61435.0
+    },
+    {
+      "owner": "Second Owner",
+      "count": 1977,
+      "avg_price": 386519.1,
+      "avg_age": 13.4,
+      "avg_km_driven": 90640.0
+    },
+    {
+      "owner": "Third Owner",
+      "count": 536,
+      "avg_price": 281250.95,
+      "avg_age": 15.4,
+      "avg_km_driven": 100180.0
+    },
+    {
+      "owner": "Fourth & Above Owner",
+      "count": 169,
+      "avg_price": 224470.37,
+      "avg_age": 17.0,
+      "avg_km_driven": 107120.0
+    }
+  ],
+  "engine_segment_summary": [
+    {
+      "engine_segment": "Under 1.0L (<1000cc)",
+      "count": 1215,
+      "avg_price": 243582.22,
+      "avg_power_bhp": 56.1,
+      "avg_mileage": 21.44
+    },
+    {
+      "engine_segment": "1.0L - 1.5L (1000-1499cc)",
+      "count": 4157,
+      "avg_price": 457747.51,
+      "avg_power_bhp": 82.9,
+      "avg_mileage": 20.71
+    },
+    {
+      "engine_segment": "2.0L - 3.0L (2000-2999cc)",
+      "count": 996,
+      "avg_price": 868301.16,
+      "avg_power_bhp": 121.1,
+      "avg_mileage": 13.96
+    },
+    {
+      "engine_segment": "1.5L - 2.0L (1500-1999cc)",
+      "count": 572,
+      "avg_price": 928125.84,
+      "avg_power_bhp": 130.0,
+      "avg_mileage": 17.62
+    },
+    {
+      "engine_segment": "3.0L+ High Capacity (>=3000cc)",
+      "count": 6,
+      "avg_price": 2655000.0,
+      "avg_power_bhp": 223.3,
+      "avg_mileage": 10.68
+    }
+  ],
+  "market_kpi": {
+    "total_vehicles": 6946,
+    "total_brands": 32,
+    "total_models": 215,
+    "market_avg_price": 519789.05,
+    "market_median_price": 401000,
+    "market_avg_age": 11.6,
+    "market_avg_km_driven": 73815.0,
+    "total_market_value_crores": 361.05
+  }
+}

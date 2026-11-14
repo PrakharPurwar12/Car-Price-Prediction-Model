@@ -1,0 +1,50 @@
+[
+  {
+    "scale": "1x",
+    "scale_factor": 1,
+    "raw_records": 8148,
+    "pandas_etl_sec": 0.052,
+    "spark_etl_sec": 7.557,
+    "pandas_throughput_rows_sec": 133462.7,
+    "spark_throughput_rows_sec": 919.2,
+    "sklearn_train_sec": 0.192,
+    "spark_mllib_train_sec": 8.081,
+    "spark_sql_query_sec": 0.482
+  },
+  {
+    "scale": "5x",
+    "scale_factor": 5,
+    "raw_records": 40740,
+    "pandas_etl_sec": 0.269,
+    "spark_etl_sec": 3.416,
+    "pandas_throughput_rows_sec": 151468.9,
+    "spark_throughput_rows_sec": 11924.5,
+    "sklearn_train_sec": 0.143,
+    "spark_mllib_train_sec": 7.132,
+    "spark_sql_query_sec": 0.431
+  },
+  {
+    "scale": "10x",
+    "scale_factor": 10,
+    "raw_records": 81480,
+    "pandas_etl_sec": 0.628,
+    "spark_etl_sec": 3.162,
+    "pandas_throughput_rows_sec": 129751.2,
+    "spark_throughput_rows_sec": 25765.1,
+    "sklearn_train_sec": 0.177,
+    "spark_mllib_train_sec": 8.943,
+    "spark_sql_query_sec": 0.4
+  },
+  {
+    "scale": "20x",
+    "scale_factor": 20,
+    "raw_records": 162960,
+    "pandas_etl_sec": 1.029,
+    "spark_etl_sec": 4.616,
+    "pandas_throughput_rows_sec": 158314.8,
+    "spark_throughput_rows_sec": 35300.2,
+    "sklearn_train_sec": 0.183,
+    "spark_mllib_train_sec": 13.334,
+    "spark_sql_query_sec": 0.788
+  }
+]
