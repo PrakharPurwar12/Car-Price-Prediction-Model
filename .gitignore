@@ -65,3 +65,17 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
+# Secrets, Credentials & Environment
+.env
+*.env
+.env.*
+*.env.*
+.streamlit/secrets.toml
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+

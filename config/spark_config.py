@@ -19,10 +19,13 @@ class SparkConfig:
 
     @classmethod
     def setup_environment(cls):
-        """Configure system environment variables required by Spark on Windows."""
-        if "JAVA_HOME" not in os.environ and os.path.exists(cls.JAVA_HOME):
-            os.environ["JAVA_HOME"] = cls.JAVA_HOME
-            
+        """Configure system environment variables required by Spark across platforms."""
+        if "JAVA_HOME" not in os.environ:
+            if os.path.exists(cls.JAVA_HOME):
+                os.environ["JAVA_HOME"] = cls.JAVA_HOME
+            elif os.path.exists("/usr/lib/jvm/default-java"):
+                os.environ["JAVA_HOME"] = "/usr/lib/jvm/default-java"
+
         if "SPARK_HOME" not in os.environ and os.path.exists(cls.SPARK_HOME):
             os.environ["SPARK_HOME"] = cls.SPARK_HOME
 
@@ -80,8 +83,9 @@ def get_spark_session(app_name: str = "CarIntel-Platform", master: str = "local[
     if os.path.exists(jar_path):
         builder = builder.config("spark.jars", jar_path) \
                          .config("spark.driver.extraClassPath", jar_path) \
-                         .config("spark.executor.extraClassPath", jar_path) \
-                         .config("spark.hadoop.fs.file.impl", "com.carintel.hadoop.WinLocalFileSystem")
+                         .config("spark.executor.extraClassPath", jar_path)
+        if sys.platform == "win32":
+            builder = builder.config("spark.hadoop.fs.file.impl", "com.carintel.hadoop.WinLocalFileSystem")
 
     # JVM options for Java 17 module encapsulation
     java_options = (
