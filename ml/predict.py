@@ -7,12 +7,12 @@ given vehicle input features.
 
 import logging
 from pathlib import Path
-from typing import Dict, Any, Union
+from typing import Dict, Any
 
 import config.spark_config
 from pyspark.ml import PipelineModel
 from pyspark.sql import SparkSession
-from config.spark_config import get_spark_session
+from spark_processing.schemas import REFERENCE_YEAR
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("CarIntelPredictor")
@@ -43,7 +43,7 @@ class CarIntelPredictor:
         Derives vehicle_age, km_per_year, power_to_engine_ratio, and is_luxury_brand automatically.
         """
         year = int(car_features.get("year", 2017))
-        vehicle_age = max(1, 2025 - year)
+        vehicle_age = max(1, REFERENCE_YEAR - year)
         km_driven = float(car_features.get("km_driven", 50000.0))
         km_per_year = round(km_driven / vehicle_age, 2)
         

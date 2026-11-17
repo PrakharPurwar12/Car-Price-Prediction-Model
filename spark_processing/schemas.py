@@ -50,5 +50,9 @@ PROCESSED_CAR_SCHEMA = StructType([
     StructField("torque_rpm", DoubleType(), True),
     StructField("seats", IntegerType(), False),
     StructField("power_to_engine_ratio", DoubleType(), False),
+    StructField("is_luxury_brand", IntegerType(), False),
 ])
+
+# Baseline reference year for vehicle age calculation across ETL, ML and inference
+REFERENCE_YEAR = 2025
 

@@ -3,6 +3,14 @@ dashboard/streamlit_app.py
 CarIntel Platform — Master Application Entry Point & Executive Architecture Overview.
 """
 
+import sys
+from pathlib import Path
+
+# Ensure project root is in sys.path when running via 'streamlit run'
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import streamlit as st
 from dashboard.utils import load_market_analytics, load_graph_summary, format_inr
 

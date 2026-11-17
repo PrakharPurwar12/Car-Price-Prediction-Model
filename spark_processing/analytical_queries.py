@@ -7,11 +7,8 @@ for consumption by the Streamlit dashboard.
 
 import json
 import logging
-import os
 from pathlib import Path
 from pyspark.sql import SparkSession
-from pyspark.sql import functions as F
-from pyspark.sql.window import Window
 from config.spark_config import get_spark_session
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")

@@ -137,11 +137,9 @@ CarIntel/
 │   ├── processed/               # Cleaned columnar Parquet (vehicles.parquet)
 │   ├── graph_metrics/           # GraphX PageRank & Connected Components metrics
 │   └── synthetic/               # Scaled benchmark datasets (1x, 5x, 10x, 20x)
-├── legacy/                      # Preserved original baseline files (unmodified)
+├── legacy/                      # Preserved original baseline implementation
 │   ├── app.py
-│   ├── main.ipynb
-│   ├── model.pkl
-│   └── report.pdf
+│   └── main.ipynb
 ├── spark_processing/            # Distributed PySpark processing pipeline
 │   ├── schemas.py               # Explicit StructType schemas
 │   ├── ingestion.py             # Schema-enforced ingestion & duplicate audit
@@ -175,17 +173,21 @@ CarIntel/
 │       ├── 2_Graph_Intelligence.py
 │       ├── 3_Price_Prediction.py
 │       └── 4_Scalability_Benchmarks.py
-├── reports/                     # Auto-generated technical reports
-│   ├── architecture.md
-│   ├── data_quality_report.md
-│   ├── model_evaluation.md
-│   └── benchmark_report.md
+├── reports/                     # Academic figures & report artifacts
+│   └── figures/                 # Publication figures & execution screenshots
+├── CarIntel_INT315_Project_Report.docx  # Formal academic project report
+├── generate_report.py           # Production report generator (python-docx)
+├── visualizations/              # Generated high-resolution network graphs
+│   └── graphx/                  # PageRank, Connected Components & topology plots
 ├── scripts/                     # Execution & automation scripts
-│   ├── compile_graphx.py
-│   ├── run_graphx.py
-│   ├── run_etl.ps1
-│   ├── run_training.ps1
-│   └── run_dashboard.ps1
+│   ├── compile_graphx.py        # Embedded Scala GraphX compiler
+│   ├── run_graphx.py            # Spark GraphX execution runner
+│   ├── generate_graphx_visualizations.py # Publication graph generator
+│   ├── run_etl.ps1              # Distributed ETL execution script
+│   ├── run_training.ps1         # MLlib training pipeline script
+│   └── run_dashboard.ps1        # Interactive Streamlit launch script
+├── pytest.ini                   # Pytest discovery & pythonpath configuration
+├── requirements.txt             # Unified Python dependencies
 └── tests/                       # Automated Pytest suite (12 tests)
     ├── test_spark_session.py
     ├── test_etl.py

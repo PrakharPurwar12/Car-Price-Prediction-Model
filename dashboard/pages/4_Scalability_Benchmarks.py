@@ -4,6 +4,13 @@ Empirical Scalability & Distributed Performance Benchmarks Explorer.
 Visualizes real measured benchmarks across 1x, 5x, 10x, 20x dataset scales.
 """
 
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px

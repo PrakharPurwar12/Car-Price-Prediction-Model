@@ -7,7 +7,6 @@ extracts and saves feature importances, and serializes the complete PipelineMode
 
 import json
 import logging
-import os
 from pathlib import Path
 
 import config.spark_config

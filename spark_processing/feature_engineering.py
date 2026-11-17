@@ -3,6 +3,7 @@ import logging
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql.types import DoubleType, IntegerType
+from .schemas import REFERENCE_YEAR
 
 logger = logging.getLogger(__name__)
 
@@ -12,7 +13,7 @@ LUXURY_BRANDS = [
 ]
 
 
-def engineer_features(df: DataFrame, reference_year: int = 2025) -> DataFrame:
+def engineer_features(df: DataFrame, reference_year: int = REFERENCE_YEAR) -> DataFrame:
     """
     Engineer domain-specific automotive features for analytical queries,
     GraphX graph construction, and MLlib prediction pipelines.

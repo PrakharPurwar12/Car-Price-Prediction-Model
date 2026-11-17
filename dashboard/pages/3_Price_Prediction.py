@@ -4,6 +4,13 @@ Interactive Vehicle Valuation Engine powered by Spark MLlib PipelineModel.
 Features real-time prediction, model comparison, and resilience verification.
 """
 
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import streamlit as st
 import pandas as pd
 from dashboard.utils import load_market_analytics, load_ml_metrics, format_inr, render_table

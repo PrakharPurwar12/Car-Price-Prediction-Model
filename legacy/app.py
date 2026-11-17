@@ -1,9 +1,15 @@
+from pathlib import Path
 import pandas as pd
 import numpy as np
 import pickle as pk
 import streamlit as st
 import time
 import plotly.express as px
+
+LEGACY_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = LEGACY_DIR.parent
+MODEL_PATH = LEGACY_DIR / 'model.pkl'
+CSV_PATH = PROJECT_ROOT / 'data' / 'raw' / 'Car dekho - Car dekho.csv'
 
 # Set page config for a wider layout and custom title
 st.set_page_config(page_title="Car Price Predictor", page_icon="🚗", layout="wide")
@@ -39,14 +45,17 @@ with st.spinner('🔄 Loading application... Please wait'):
 # Load trained model
 @st.cache_resource
 def load_model():
-    return pk.load(open('model.pkl', 'rb'))
+    path = MODEL_PATH if MODEL_PATH.exists() else Path("model.pkl")
+    with open(path, "rb") as f:
+        return pk.load(f)
 
 model = load_model()
 
 # Load dataset
 @st.cache_data
 def load_data():
-    data = pd.read_csv('Car dekho - Car dekho.csv')
+    path = CSV_PATH if CSV_PATH.exists() else Path("Car dekho - Car dekho.csv")
+    data = pd.read_csv(path)
     data['Name'] = data['Name'].apply(lambda x: str(x).split(' ')[0].strip())
     return data
 

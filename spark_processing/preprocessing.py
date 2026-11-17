@@ -4,6 +4,7 @@ from typing import Tuple, Dict, Any
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql.types import DoubleType, IntegerType
+from .schemas import REFERENCE_YEAR
 
 logger = logging.getLogger(__name__)
 
@@ -129,7 +130,7 @@ def clean_and_preprocess_data(raw_df: DataFrame) -> Tuple[DataFrame, Dict[str, A
     # 5. Filter invalid records (e.g. non-positive prices or invalid years)
     # Valid luxury vehicles with prices up to 10M INR are strictly preserved
     valid_filter = (F.col("selling_price") > 0) & \
-                   (F.col("year") >= 1980) & (F.col("year") <= 2025) & \
+                   (F.col("year") >= 1980) & (F.col("year") <= REFERENCE_YEAR) & \
                    (F.col("km_driven") > 0) & (F.col("km_driven") <= 2500000)
 
     filtered_df = cleaned.filter(valid_filter)

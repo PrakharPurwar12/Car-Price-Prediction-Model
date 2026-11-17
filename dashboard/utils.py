@@ -86,46 +86,56 @@ def format_inr(val):
 
 def render_table(df: pd.DataFrame, max_height: int = 400):
     """
-    Renders a styled, responsive HTML table in Streamlit.
-    Avoids st.dataframe() and st.table() PyArrow DLL restrictions.
+    Renders a styled, responsive table in Streamlit.
+    Tries native st.dataframe() first. If PyArrow is restricted by Windows
+    Application Control, gracefully falls back to clean HTML rendering via st.html().
     """
-    css = f"""
-    <style>
-        .custom-tbl-wrapper {{
-            width: 100%;
-            max-height: {max_height}px;
-            overflow: auto;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            margin: 12px 0 20px 0;
-            background: #ffffff;
-        }}
-        .custom-tbl {{
-            width: 100%;
-            border-collapse: collapse;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 13.5px;
-            color: #212529;
-        }}
-        .custom-tbl th {{
-            position: sticky;
-            top: 0;
-            background-color: #f8f9fa;
-            color: #1a1a1a;
-            font-weight: 600;
-            text-align: left;
-            padding: 10px 14px;
-            border-bottom: 2px solid #dee2e6;
-            z-index: 2;
-        }}
-        .custom-tbl td {{
-            padding: 9px 14px;
-            border-bottom: 1px solid #f1f3f5;
-        }}
-        .custom-tbl tr:hover {{
-            background-color: #f8f9fa;
-        }}
-    </style>
-    """
-    html_table = df.to_html(classes="custom-tbl", index=False, escape=False)
-    st.markdown(f'{css}<div class="custom-tbl-wrapper">{html_table}</div>', unsafe_allow_html=True)
+    try:
+        try:
+            st.dataframe(df, width="stretch", height=max_height)
+        except TypeError:
+            st.dataframe(df, use_container_width=True, height=max_height)
+    except Exception:
+        css = f"""<style>
+            .custom-tbl-wrapper {{
+                width: 100%;
+                max-height: {max_height}px;
+                overflow: auto;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                margin: 12px 0 20px 0;
+                background: #ffffff;
+            }}
+            .custom-tbl {{
+                width: 100%;
+                border-collapse: collapse;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-size: 13.5px;
+                color: #212529;
+            }}
+            .custom-tbl th {{
+                position: sticky;
+                top: 0;
+                background-color: #f8f9fa;
+                color: #1a1a1a;
+                font-weight: 600;
+                text-align: left;
+                padding: 10px 14px;
+                border-bottom: 2px solid #dee2e6;
+                z-index: 2;
+            }}
+            .custom-tbl td {{
+                padding: 9px 14px;
+                border-bottom: 1px solid #f1f3f5;
+            }}
+            .custom-tbl tr:hover {{
+                background-color: #f8f9fa;
+            }}
+        </style>"""
+        html_table = df.to_html(classes="custom-tbl", index=False, escape=False)
+        full_html = f'{css}<div class="custom-tbl-wrapper">{html_table}</div>'
+        if hasattr(st, "html"):
+            st.html(full_html)
+        else:
+            flat_html = "".join(line.strip() for line in full_html.splitlines())
+            st.markdown(flat_html, unsafe_allow_html=True)

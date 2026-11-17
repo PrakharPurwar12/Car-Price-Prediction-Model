@@ -3,10 +3,16 @@ dashboard/pages/1_Market_Overview.py
 Interactive Market Intelligence & Spark SQL Analytical Queries.
 """
 
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 from dashboard.utils import load_market_analytics, load_sample_vehicles, format_inr, render_table
 
 st.set_page_config(page_title="Market Overview | CarIntel", page_icon="📊", layout="wide")

@@ -1,6 +1,5 @@
 """End-to-End Distributed ETL Pipeline for CarIntel Platform."""
 import os
-import sys
 import logging
 from typing import Dict, Any, Tuple
 from pyspark.sql import SparkSession, DataFrame

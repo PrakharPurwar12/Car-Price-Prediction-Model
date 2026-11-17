@@ -11,7 +11,6 @@ Saves metrics to experiments/results/benchmark_metrics.csv and reports/benchmark
 import csv
 import json
 import logging
-import os
 import time
 from pathlib import Path
 
@@ -22,6 +21,7 @@ from sklearn.preprocessing import OneHotEncoder as SklearnOHE
 
 import config.spark_config
 from config.spark_config import get_spark_session
+from spark_processing.schemas import REFERENCE_YEAR
 from spark_processing.ingestion import ingest_raw_data
 from spark_processing.preprocessing import clean_and_preprocess_data
 from spark_processing.feature_engineering import engineer_features
@@ -50,7 +50,7 @@ def benchmark_pandas_etl(csv_path: str):
     df["mileage_val"] = df["mileage"].astype(str).str.extract(r"(\d+\.?\d*)")[0].astype(float).fillna(19.3)
     df["engine_cc"] = df["engine"].astype(str).str.extract(r"(\d+)")[0].astype(float).fillna(1248.0)
     df["max_power_bhp"] = df["max_power"].astype(str).str.extract(r"(\d+\.?\d*)")[0].astype(float).fillna(82.0)
-    df["vehicle_age"] = np.clip(2025 - df["year"], 0, 45)
+    df["vehicle_age"] = np.clip(REFERENCE_YEAR - df["year"], 0, 45)
     df["km_per_year"] = df["km_driven"] / (df["vehicle_age"] + 0.5)
     df["power_to_engine_ratio"] = df["max_power_bhp"] / (df["engine_cc"] + 1e-4)
     duration = time.perf_counter() - start

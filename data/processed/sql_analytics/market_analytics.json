@@ -358,7 +358,7 @@
       "fuel": "Diesel",
       "total_count": 3760,
       "avg_price": 642121.48,
-      "avg_mileage": 19.74,
+      "avg_mileage": 19.75,
       "avg_km_driven": 88599.0,
       "avg_age": 11.3,
       "price_per_year_retained": 63549.73
@@ -367,7 +367,7 @@
       "fuel": "Petrol",
       "total_count": 3091,
       "avg_price": 378189.57,
-      "avg_mileage": 19.05,
+      "avg_mileage": 19.13,
       "avg_km_driven": 55745.0,
       "avg_age": 11.8,
       "price_per_year_retained": 39614.75
@@ -376,7 +376,7 @@
       "fuel": "CNG",
       "total_count": 56,
       "avg_price": 300499.95,
-      "avg_mileage": 33.34,
+      "avg_mileage": 32.34,
       "avg_km_driven": 69329.0,
       "avg_age": 10.6,
       "price_per_year_retained": 32125.28
@@ -385,7 +385,7 @@
       "fuel": "LPG",
       "total_count": 38,
       "avg_price": 200421.05,
-      "avg_mileage": 25.82,
+      "avg_mileage": 25.31,
       "avg_km_driven": 89174.0,
       "avg_age": 15.4,
       "price_per_year_retained": 13632.88
@@ -468,21 +468,21 @@
       "count": 4157,
       "avg_price": 457747.51,
       "avg_power_bhp": 82.9,
-      "avg_mileage": 20.71
+      "avg_mileage": 20.69
     },
     {
       "engine_segment": "2.0L - 3.0L (2000-2999cc)",
       "count": 996,
       "avg_price": 868301.16,
       "avg_power_bhp": 121.1,
-      "avg_mileage": 13.96
+      "avg_mileage": 14.04
     },
     {
       "engine_segment": "1.5L - 2.0L (1500-1999cc)",
       "count": 572,
       "avg_price": 928125.84,
       "avg_power_bhp": 130.0,
-      "avg_mileage": 17.62
+      "avg_mileage": 17.65
     },
     {
       "engine_segment": "3.0L+ High Capacity (>=3000cc)",

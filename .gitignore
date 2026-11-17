@@ -36,6 +36,14 @@ target/
 project/project/
 project/target/
 !graphx/target/carintel-graphx.jar
+graphx/target/classes/
+config/classes/
+
+# Hadoop / Spark Checksums
+*.crc
+.*.crc
+*.parquet.crc
+.*.parquet.crc
 
 # Temporary Spark Export Folders
 data/processed/vehicles_csv/
