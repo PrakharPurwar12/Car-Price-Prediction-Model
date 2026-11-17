@@ -54,7 +54,6 @@ flowchart TD
         GraphX --> Page2["Page 2: Graph Intelligence & Market Hubs"]
         MLlib --> Page3["Page 3: Real-Time Valuation & Inference"]
         ParquetOut --> Page4["Page 4: Empirical Scalability Benchmarks"]
-        S4 --> ReportGen["Academic Report Generator<br/>generate_report.py -> DOCX Report"]
     end
 
     style S1 fill:#f0f7ff,stroke:#0366d6,stroke-width:2px
@@ -211,11 +210,6 @@ python -m experiments.benchmark_runner
 ### 7. Run Test Suite
 ```powershell
 pytest tests/ -v
-```
-
-### 8. Generate Academic Project Report (DOCX)
-```powershell
-python generate_report.py
 ```
 
 ---
